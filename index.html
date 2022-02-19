@@ -11,9 +11,16 @@
 
 <body>
     <main>
-        <h1>Привіт Світ</h1>
-        <input type="text" id="deaf">
+        <h1 id="h1">Привіт Світ</h1>
+        <input type="text" id="deaf" placeholder="Привіт Світ" oninput="getVal()">
     </main>
+    <script>
+        function getVal() {
+            var val = document.getElementById('deaf').value;
+            document.getElementById("h1").innerHTML = val;
+            console.log(val)
+        }
+    </script>
 </body>
 
 </html>

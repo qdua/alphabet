@@ -1,0 +1,34 @@
+*,
+*::after,
+*::before,
+html,
+body {
+    box-sizing: border-box;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font: normal 16px/1.5 sans-serif;
+    height: 100vh;
+}
+
+body {
+    background-color: #02374d;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+h1 {
+    color: springgreen;
+    font-size: 2rem;
+}
+
+#deaf {
+    background-color: transparent;
+    border: 1px solid dodgerblue;
+    padding: 12px 24px;
+}
