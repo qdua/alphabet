@@ -36,7 +36,9 @@ h1 {
     border: 2px solid dodgerblue;
     border-radius: 4px;
     font-size: 18px;
+    letter-spacing: 4px;
     padding: 16px 24px;
+    text-align: center;
     text-transform: uppercase;
 }
 
