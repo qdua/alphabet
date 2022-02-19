@@ -112,21 +112,24 @@ h1 {
     background-size: auto 55%;
     border: none;
     border-radius: 4px;
-    box-shadow: 0 1px 2px -1px #00ff7f25 inset, 0 2px 2px -1px #00000025;
+    box-shadow: 0 1px 2px -1px #00ff7f25 inset, 0 3px 4px -2px #00000025;
     cursor: pointer;
     display: flex;
     padding: 4px;
     height: 48px;
     text-align: left;
+    transform: scale(1);
+    transition: .05s linear;
     width: 48px;
 }
 
 .alphabet button:hover {
-    box-shadow: 0 0px 0px 2px #00ff7f25 inset, 0 2px 2px -1px #00000025;
+    box-shadow: 0 0px 0px 2px #00ff7f25 inset, 0 3px 4px -2px #00000045;
 }
 
 .alphabet button:active {
-    box-shadow: 0 0px 0px 2px #00ff7f75 inset, 0 2px 2px -1px #00000025;
+    box-shadow: 0 0px 0px 2px #00ff7f75 inset, 0 2px 4px -2px #00000025;
+    transform: scale(.99);
 }
 
 h1#sign s {
