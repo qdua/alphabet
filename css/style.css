@@ -16,19 +16,60 @@ body {
 }
 
 body {
+    align-items: center;
     background-color: #02374d;
     display: grid;
     height: 100vh;
     place-items: center;
+    justify-content: center;
 }
 
 h1 {
-    color: springgreen;
+    color: #00ff7f;
     font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 #deaf {
     background-color: transparent;
-    border: 1px solid dodgerblue;
-    padding: 12px 24px;
+    border: 2px solid dodgerblue;
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 16px 24px;
+    text-transform: uppercase;
+}
+
+h1#sign {
+    align-items: center;
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+}
+
+h1#sign s {
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0;
+    height: 100px;
+    text-decoration: none;
+    width: 60px;
+}
+
+[data-s=s_23_t] {
+    background-image: url(/images/alphabet/23_t.svg);
+}
+
+[data-s=s_19_o] {
+    background-image: url(/images/alphabet/19_o.svg);
+}
+
+[data-s=s_16_l] {
+    background-image: url(/images/alphabet/16_l.svg);
+}
+
+[data-s=s_32_ja] {
+    background-image: url(/images/alphabet/32_ja.svg);
 }

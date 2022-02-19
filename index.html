@@ -11,14 +11,19 @@
 
 <body>
     <main>
-        <h1 id="h1">Привіт Світ</h1>
-        <input type="text" id="deaf" placeholder="Привіт Світ" oninput="getVal()">
+        <h1 id="sign">
+            <s data-s="s_23_t">Т</s>
+            <s data-s="s_19_o">О</s>
+            <s data-s="s_16_l">Л</s>
+            <s data-s="s_32_ja">Я</s>
+        </h1>
+        <h1 id="text">ТОЛЯ</h1>
+        <input type="text" id="deaf" placeholder="ТОЛЯ" oninput="getVal()">
     </main>
     <script>
         function getVal() {
-            var val = document.getElementById('deaf').value;
-            document.getElementById("h1").innerHTML = val;
-            console.log(val)
+            var value = document.getElementById('deaf').value;
+            document.getElementById("text").innerHTML = value;
         }
     </script>
 </body>
