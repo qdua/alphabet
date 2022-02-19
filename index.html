@@ -18,12 +18,58 @@
             <s data-sign="s_14_yi">Й</s>
         </h1>
         <h1 id="text">МРІЙ</h1>
-        <input type="text" id="deaf" placeholder="МРІЙ" oninput="getVal()">
+        <div class="input">
+            <input type="text" id="deaf" placeholder="МРІЙ" oninput="getVal()">
+            <button class="qwerty" onclick="qwerty()"></button>
+            <div class="alphabet">
+                <button data-sign="s_1_a">А</button>
+                <button data-sign="s_2_b">Б</button>
+                <button data-sign="s_3_v">В</button>
+                <button data-sign="s_4_g">Г</button>
+                <button data-sign="s_5_g">Ґ</button>
+                <button data-sign="s_6_d">Д</button>
+                <button data-sign="s_7_e">Е</button>
+                <button data-sign="s_8_e">Є</button>
+                <button data-sign="s_9_zh">Ж</button>
+                <button data-sign="s_10_z">З</button>
+                <button data-sign="s_11_ji">И</button>
+                <button data-sign="s_12_i">І</button>
+                <button data-sign="s_13_ii">Ї</button>
+                <button data-sign="s_14_yi">Й</button>
+                <button data-sign="s_15_k">К</button>
+                <button data-sign="s_16_l">Л</button>
+                <button data-sign="s_17_m">М</button>
+                <button data-sign="s_18_n">Н</button>
+                <button data-sign="s_19_o">О</button>
+                <button data-sign="s_20_p">П</button>
+                <button data-sign="s_21_r">Р</button>
+                <button data-sign="s_22_s">С</button>
+                <button data-sign="s_23_t">Т</button>
+                <button data-sign="s_24_u">У</button>
+                <button data-sign="s_25_f">Ф</button>
+                <button data-sign="s_26_h">Х</button>
+                <button data-sign="s_27_tc">Ц</button>
+                <button data-sign="s_28_ch">Ч</button>
+                <button data-sign="s_29_sh">Ш</button>
+                <button data-sign="s_30_shc">Щ</button>
+                <button data-sign="s_31_y">Ю</button>
+                <button data-sign="s_32_ja">Я</button>
+                <button data-sign="s_33_mz">Ь</button>
+                <button class="space"><i>&rbrack;</i></button>
+                <button class="clear">Очистити</button>
+            </div>
+        </div>
     </main>
     <script>
         function getVal() {
             var value = document.getElementById('deaf').value;
             document.getElementById("text").innerHTML = value;
+        }
+
+
+
+        function qwerty() {
+            var alphabet = document.getElementsByClassName('alphabet')[0].classList.toggle('open')
         }
     </script>
 </body>

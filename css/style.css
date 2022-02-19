@@ -21,9 +21,13 @@ body {
 }
 
 main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     left: 50%;
+    justify-content: center;
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -75%);
     top: 50%;
 }
 
@@ -40,22 +44,89 @@ h1 {
     text-transform: uppercase;
 }
 
+.input {
+    align-items: center;
+    display: flex;
+    gap: 4px;
+    position: relative;
+    width: 300px;
+}
+
 #deaf {
     background-color: transparent;
     border: 2px solid dodgerblue;
     border-radius: 8px;
     font-size: 18px;
     letter-spacing: 4px;
-    left: 50%;
-    padding: 16px 24px;
-    position: absolute;
+    padding: 16px 56px 16px 16px;
     text-align: center;
     text-transform: uppercase;
-    transform: translateX(-50%);
+    width: 300px;
 }
 
 #deaf::placeholder {
     color: #00ff7f;
+}
+
+.qwerty {
+    background: transparent url(/images/iconQwerty.svg) no-repeat center / contain;
+    border: none;
+    cursor: pointer;
+    font-size: 0;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 8px;
+    width: 40px;
+}
+
+.alphabet {
+    background-color: #084058;
+    border-radius: 16px;
+    box-shadow: 0 2vmin 8vmin -4vmin #02151d;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 5px;
+    left: 50%;
+    opacity: 0;
+    padding: 16px;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    transform: translateX(-50%);
+    transition: .3s linear;
+}
+
+.open {
+    opacity: 1;
+    pointer-events: auto;
+    top: 105%;
+}
+
+.alphabet button {
+    align-items: flex-start;
+    background-color: #022838;
+    background-position: 20px 12px;
+    background-repeat: no-repeat;
+    background-size: auto 55%;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px -1px #00ff7f25 inset, 0 2px 2px -1px #00000025;
+    cursor: pointer;
+    display: flex;
+    padding: 4px;
+    height: 48px;
+    text-align: left;
+    width: 48px;
+}
+
+.alphabet button:hover {
+    box-shadow: 0 0px 0px 2px #00ff7f25 inset, 0 2px 2px -1px #00000025;
+}
+
+.alphabet button:active {
+    box-shadow: 0 0px 0px 2px #00ff7f75 inset, 0 2px 2px -1px #00000025;
 }
 
 h1#sign s {
@@ -67,6 +138,48 @@ h1#sign s {
     height: 100px;
     text-decoration: none;
     width: 60px;
+}
+
+button.space {
+    align-items: center;
+    justify-content: center;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    width: auto;
+}
+
+button.clear {
+    align-items: center;
+    justify-content: center;
+    grid-column-start: 9;
+    grid-column-end: 12;
+    width: auto;
+}
+
+.space i {
+    font-style: normal;
+    transform: rotate(90deg);
+}
+
+
+/* button[data-sign=s_4_g],
+button[data-sign=s_5_g],
+button[data-sign=s_6_d],
+button[data-sign=s_7_e],
+button[data-sign=s_8_e],
+button[data-sign=s_9_zh] {
+    background-position: 10px center;
+}
+*/
+
+button[data-sign=s_9_zh] {
+    background-size: auto 45%;
+    background-position: 16px center;
+}
+
+button[data-sign=s_7_e],
+button[data-sign=s_8_e] {
+    background-position: 16px center;
 }
 
 [data-sign=s_1_a] {
