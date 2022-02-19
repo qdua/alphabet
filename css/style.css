@@ -9,24 +9,33 @@ body {
     padding: 0;
 }
 
-html,
-body {
-    font: normal 16px/1.5 sans-serif;
-    height: 100vh;
+html {
+    font-size: 16px;
 }
 
 body {
-    align-items: center;
-    background-color: #02374d;
-    display: grid;
+    background: #022838;
+    font: normal 1rem/1.5 sans-serif;
+    overflow: hidden;
     height: 100vh;
-    place-items: center;
-    justify-content: center;
+}
+
+main {
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
 }
 
 h1 {
+    align-items: center;
     color: #00ff7f;
+    display: flex;
+    gap: 8px;
     font-size: 2rem;
+    height: 100px;
+    letter-spacing: 4px;
+    justify-content: center;
     text-align: center;
     text-transform: uppercase;
 }
@@ -34,24 +43,24 @@ h1 {
 #deaf {
     background-color: transparent;
     border: 2px solid dodgerblue;
-    border-radius: 4px;
+    border-radius: 8px;
     font-size: 18px;
     letter-spacing: 4px;
+    left: 50%;
     padding: 16px 24px;
+    position: absolute;
     text-align: center;
     text-transform: uppercase;
+    transform: translateX(-50%);
 }
 
-h1#sign {
-    align-items: center;
-    display: flex;
-    gap: 4px;
-    justify-content: center;
+#deaf::placeholder {
+    color: #00ff7f;
 }
 
 h1#sign s {
     background-color: transparent;
-    background-position: center;
+    background-position: center bottom;
     background-repeat: no-repeat;
     background-size: contain;
     font-size: 0;
@@ -60,134 +69,134 @@ h1#sign s {
     width: 60px;
 }
 
-[data-s=s_1_a] {
+[data-sign=s_1_a] {
     background-image: url(/images/alphabet/s_1_a.svg);
 }
 
-[data-s=s_2_b] {
+[data-sign=s_2_b] {
     background-image: url(/images/alphabet/s_2_b.svg);
 }
 
-[data-s=s_3_v] {
+[data-sign=s_3_v] {
     background-image: url(/images/alphabet/s_3_v.svg);
 }
 
-[data-s=s_4_g] {
+[data-sign=s_4_g] {
     background-image: url(/images/alphabet/s_4_g.svg);
 }
 
-[data-s=s_5_g] {
+[data-sign=s_5_g] {
     background-image: url(/images/alphabet/s_5_g.svg);
 }
 
-[data-s=s_6_d] {
+[data-sign=s_6_d] {
     background-image: url(/images/alphabet/s_6_d.svg);
 }
 
-[data-s=s_7_e] {
+[data-sign=s_7_e] {
     background-image: url(/images/alphabet/s_7_e.svg);
 }
 
-[data-s=s_8_e] {
+[data-sign=s_8_e] {
     background-image: url(/images/alphabet/s_8_e.svg);
 }
 
-[data-s=s_9_zh] {
+[data-sign=s_9_zh] {
     background-image: url(/images/alphabet/s_9_zh.svg);
 }
 
-[data-s=s_10_z] {
+[data-sign=s_10_z] {
     background-image: url(/images/alphabet/s_10_z.svg);
 }
 
-[data-s=s_11_ji] {
+[data-sign=s_11_ji] {
     background-image: url(/images/alphabet/s_11_ji.svg);
 }
 
-[data-s=s_12_i] {
+[data-sign=s_12_i] {
     background-image: url(/images/alphabet/s_12_i.svg);
 }
 
-[data-s=s_13_ii] {
+[data-sign=s_13_ii] {
     background-image: url(/images/alphabet/s_13_ii.svg);
 }
 
-[data-s=s_14_yi] {
+[data-sign=s_14_yi] {
     background-image: url(/images/alphabet/s_14_yi.svg);
 }
 
-[data-s=s_15_k] {
+[data-sign=s_15_k] {
     background-image: url(/images/alphabet/s_15_k.svg);
 }
 
-[data-s=s_16_l] {
+[data-sign=s_16_l] {
     background-image: url(/images/alphabet/s_16_l.svg);
 }
 
-[data-s=s_17_m] {
+[data-sign=s_17_m] {
     background-image: url(/images/alphabet/s_17_m.svg);
 }
 
-[data-s=s_18_n] {
+[data-sign=s_18_n] {
     background-image: url(/images/alphabet/s_18_n.svg);
 }
 
-[data-s=s_19_o] {
+[data-sign=s_19_o] {
     background-image: url(/images/alphabet/s_19_o.svg);
 }
 
-[data-s=s_20_p] {
+[data-sign=s_20_p] {
     background-image: url(/images/alphabet/s_20_p.svg);
 }
 
-[data-s=s_21_r] {
+[data-sign=s_21_r] {
     background-image: url(/images/alphabet/s_21_r.svg);
 }
 
-[data-s=s_22_s] {
+[data-sign=s_22_s] {
     background-image: url(/images/alphabet/s_22_s.svg);
 }
 
-[data-s=s_23_t] {
+[data-sign=s_23_t] {
     background-image: url(/images/alphabet/s_23_t.svg);
 }
 
-[data-s=s_24_u] {
+[data-sign=s_24_u] {
     background-image: url(/images/alphabet/s_24_u.svg);
 }
 
-[data-s=s_25_f] {
+[data-sign=s_25_f] {
     background-image: url(/images/alphabet/s_25_f.svg);
 }
 
-[data-s=s_26_h] {
+[data-sign=s_26_h] {
     background-image: url(/images/alphabet/s_26_h.svg);
 }
 
-[data-s=s_27_tc] {
+[data-sign=s_27_tc] {
     background-image: url(/images/alphabet/s_27_tc.svg);
 }
 
-[data-s=s_28_ch] {
+[data-sign=s_28_ch] {
     background-image: url(/images/alphabet/s_28_ch.svg);
 }
 
-[data-s=s_29_sh] {
+[data-sign=s_29_sh] {
     background-image: url(/images/alphabet/s_29_sh.svg);
 }
 
-[data-s=s_30_shc] {
+[data-sign=s_30_shc] {
     background-image: url(/images/alphabet/s_30_shc.svg);
 }
 
-[data-s=s_31_y] {
+[data-sign=s_31_y] {
     background-image: url(/images/alphabet/s_31_y.svg);
 }
 
-[data-s=s_32_ja] {
+[data-sign=s_32_ja] {
     background-image: url(/images/alphabet/s_32_ja.svg);
 }
 
-[data-s=s_33_mz] {
+[data-sign=s_33_mz] {
     background-image: url(/images/alphabet/s_33_mz.svg);
 }
