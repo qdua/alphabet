@@ -1,5 +1,5 @@
 # alphabet
-Alphabet
+Ukrainian Sign Language Alphabet
 
 ![Screen](images/page.png)
 
