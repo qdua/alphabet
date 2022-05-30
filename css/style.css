@@ -1,3 +1,10 @@
+:root {
+    --blue: #0057b7;
+    --blue2: #02448c;
+    --blue3: #01346b;
+    --gold: #ffcc00;
+}
+
 *,
 *::after,
 *::before,
@@ -14,7 +21,7 @@ html {
 }
 
 body {
-    background: #022838;
+    background: var(--blue);
     font: normal 1rem/1.5 sans-serif;
     overflow: hidden;
     height: 100vh;
@@ -33,7 +40,7 @@ main {
 
 h1 {
     align-items: center;
-    color: #00ff7f;
+    color: var(--gold);
     display: flex;
     gap: 8px;
     font-size: 2rem;
@@ -65,7 +72,7 @@ h1 {
 }
 
 #deaf::placeholder {
-    color: #00ff7f;
+    color: var(--gold);
 }
 
 .qwerty {
@@ -82,7 +89,7 @@ h1 {
 }
 
 .alphabet {
-    background-color: #084058;
+    background-color: var(--blue2);
     border-radius: 16px;
     box-shadow: 0 2vmin 8vmin -4vmin #02151d;
     display: grid;
@@ -106,7 +113,7 @@ h1 {
 
 .alphabet button {
     align-items: flex-start;
-    background-color: #022838;
+    background-color: var(--blue3);
     background-position: 20px 12px;
     background-repeat: no-repeat;
     background-size: auto 55%;
