@@ -1,4 +1,4 @@
-var alphabet = {
+const alphabet = {
     "А": "s_1_a",
     "Б": "s_2_b",
     "В": "s_3_v",
@@ -32,4 +32,57 @@ var alphabet = {
     "Ю": "s_31_y",
     "Я": "s_32_ja",
     "Ь": "s_33_mz"
-};
+}
+
+const keyboard = document.querySelector('.alphabet')
+const qwerty = document.querySelector('.qwerty')
+
+for (const [key, value] of Object.entries(alphabet)) {
+    keyboard.innerHTML += '<button data-sign="' + value + '">' + key + '</button>'
+}
+keyboard.innerHTML += '<button class="space"><i>&rbrack;</i></button>'
+keyboard.innerHTML += '<button class="clear">Очистити</button>'
+
+qwerty.addEventListener('click', () => keyboard.classList.toggle('open'))
+
+deaf.addEventListener('input', () => {
+    deaf.value = deaf.value.replace(/[^а-яА-ЯёЁ ]/g, '').toUpperCase()
+    signUpdate()
+})
+
+document.querySelector('.clear').addEventListener('click', () => {
+    deaf.value = ''
+    signUpdate()
+})
+
+document.querySelector('.space').addEventListener('click', () => {
+    deaf.value += ' '
+    signUpdate()
+})
+
+window.addEventListener('load', () => {
+    keyboard.querySelectorAll('button[data-sign]').forEach(element => {
+        element.addEventListener('click', () => {
+            deaf.value += element.innerText
+            signUpdate()
+        })
+    })
+})
+
+signUpdate()
+
+function signUpdate() {
+    text.innerText = deaf.value.length ? deaf.value : 'МРІЙ'
+
+    sign.innerHTML = ''
+    for (const key of text.innerText.split('')) {
+        const s = document.createElement('s')
+
+        if (key != ' ') {
+            s.setAttribute('data-sign', alphabet[key])
+            s.innerText = key
+        }
+
+        sign.appendChild(s)
+    }
+}1
