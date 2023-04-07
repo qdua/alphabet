@@ -85,4 +85,4 @@ function signUpdate() {
 
         sign.appendChild(s)
     }
-}1
+}
